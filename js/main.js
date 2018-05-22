@@ -26,17 +26,18 @@ function dragEnd () {
 
 function dragOver (e) {
   e.preventDefault()
-  console.log('dragOver')
 }
 
-function dragEnter () {
-  console.log('dragEnter')
+function dragEnter (e) {
+  e.preventDefault()
+  this.className += ' hovered'
 }
 
 function dragLeave () {
-  console.log('dragLeave')
+  this.className = 'empty'
 }
 
 function dragDrop () {
-  console.log('dragDrop')
+  this.className = 'empty'
+  this.append(fill)
 }
